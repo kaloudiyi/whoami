@@ -14,11 +14,11 @@ app.get('/', function (req, res) {
   dns.reverse(ip,function(err, domains) {
     res.send(JSON.stringify(domains));
   });
-  var ret = {
+  /*var ret = {
     ipadress: ip,
     language: req.headers["accept-language"].split(",")[0].toLowerCase()
   };
-  res.send(JSON.stringify(ret));
+  res.send(JSON.stringify(ret)); */
 });
 
 app.listen(PORT);
