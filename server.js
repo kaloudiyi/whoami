@@ -11,7 +11,7 @@ app.get('/', function (req, res) {
   if (ip.substr(0, 7) == "::ffff:") {
     ip = ip.substr(7)
   }
-  dns.reverse(req.connection.remoteAddress, function(err, domains) {
+  dns.reverse(ip,function(err, domains) {
     res.send(JSON.stringify(domains));
   });
   var ret = {
